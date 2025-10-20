@@ -1,0 +1,32 @@
+.blog-content {
+    line-height: 1.7;
+}
+
+.blog-content h4 {
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.blog-content .lead {
+    font-size: 1.2rem;
+    color: #495057;
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+}
+
+.card-img-top {
+    border-radius: 10px 10px 0 0;
+}
+
+@media (max-width: 768px) {
+    .card-title {
+        font-size: 1.5rem;
+    }
+    
+    .blog-content {
+        font-size: 1rem;
+    }
+}

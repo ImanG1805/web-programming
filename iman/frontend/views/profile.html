@@ -1,0 +1,183 @@
+<div class="container mt-4 mb-5">
+    <div class="row justify-content-center">
+        <div class="col-12 col-lg-10 col-xl-8">
+            <!-- prof header card -->
+            <div class="card profile-header-card shadow mb-4">
+                <div class="card-body text-center p-4 p-md-5">
+                    <div class="profile-avatar-wrapper mb-3">
+                        <img src="https://ui-avatars.com/api/?name=Sarah+Johnson&size=120&background=007bff&color=fff&bold=true" 
+                             alt="Profile Avatar" 
+                             class="profile-avatar rounded-circle">
+                    </div>
+                    <h2 class="profile-name mb-2">Sarah Johnson</h2>
+                    <p class="profile-bio text-muted mb-4">Skincare enthusiast | Beauty blogger | Sharing my journey to healthy skin ✨</p>
+                    
+                    <div class="row justify-content-center profile-stats">
+                        <div class="col-4">
+                            <div class="text-center">
+                                <div class="stat-number h4 text-primary mb-1">24</div>
+                                <div class="stat-label text-muted small">Blog Posts</div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="text-center">
+                                <div class="stat-number h4 text-primary mb-1">1.2K</div>
+                                <div class="stat-label text-muted small">Followers</div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="text-center">
+                                <div class="stat-number h4 text-primary mb-1">358</div>
+                                <div class="stat-label text-muted small">Following</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pprofile info card-->
+            <div class="card profile-info-card shadow mb-4">
+                <div class="card-header bg-light d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center">
+                    <h5 class="mb-2 mb-md-0">Profile Information</h5>
+                    <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#editProfileModal">
+                        Edit Profile
+                    </button>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <div class="profile-info-item">
+                                <div class="info-label text-muted small">Email</div>
+                                <div class="info-value">sarah.johnson@email.com</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="profile-info-item">
+                                <div class="info-label text-muted small">Phone</div>
+                                <div class="info-value">+1 (555) 123-4567</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="profile-info-item">
+                                <div class="info-label text-muted small">Location</div>
+                                <div class="info-value">Los Angeles, CA</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="profile-info-item">
+                                <div class="info-label text-muted small">Member Since</div>
+                                <div class="info-value">January 2024</div>
+                            </div>
+                        </div>
+                        <div class="col-12 mb-3">
+                            <div class="profile-info-item">
+                                <div class="info-label text-muted small">Website</div>
+                                <div class="info-value">www.sarahskincare.com</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- settings card/change pass -->
+            <div class="card profile-settings-card shadow">
+                <div class="card-header bg-light">
+                    <h5 class="mb-0">Account Settings</h5>
+                </div>
+                <div class="card-body">
+                    <div class="settings-item d-flex justify-content-between align-items-center">
+                        <div class="settings-info">
+                            <div class="settings-title fw-bold mb-1">Password</div>
+                            <div class="settings-desc text-muted small">Change your account password</div>
+                        </div>
+                        <button class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#changePasswordModal">
+                            Change
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- edit profile modal -->
+<div class="modal fade" id="editProfileModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title">Edit Profile</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label class="form-label fw-semibold">Full Name</label>
+                    <input type="text" class="form-control" id="editName" value="Sarah Johnson" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label fw-semibold">Bio</label>
+                    <textarea class="form-control" id="editBio" rows="3" maxlength="160">Skincare enthusiast | Beauty blogger | Sharing my journey to healthy skin ✨</textarea>
+                    <div class="form-text">Maximum 160 characters</div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label fw-semibold">Email</label>
+                    <input type="email" class="form-control" id="editEmail" value="sarah.johnson@email.com" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label fw-semibold">Phone</label>
+                    <input type="tel" class="form-control" id="editPhone" value="+1 (555) 123-4567">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label fw-semibold">Location</label>
+                    <input type="text" class="form-control" id="editLocation" value="Los Angeles, CA">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label fw-semibold">Website</label>
+                    <input type="url" class="form-control" id="editWebsite" value="www.sarahskincare.com">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" id="saveProfileBtn">Save Changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- change pass modal -->
+<div class="modal fade" id="changePasswordModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title">Change Password</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label class="form-label fw-semibold">Current Password</label>
+                    <input type="password" class="form-control" id="currentPassword" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label fw-semibold">New Password</label>
+                    <input type="password" class="form-control" id="newPassword" required>
+                    <div class="form-text">Must be at least 8 characters long</div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label fw-semibold">Confirm New Password</label>
+                    <input type="password" class="form-control" id="confirmPassword" required>
+                </div>
+                <div class="alert alert-info">
+                    <strong>Password Requirements:</strong>
+                    <ul class="mb-0 mt-2">
+                        <li>At least 8 characters long</li>
+                        <li>Contains uppercase and lowercase letters</li>
+                        <li>Contains at least one number</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" id="changePasswordBtn">Update Password</button>
+            </div>
+        </div>
+    </div>
+</div>

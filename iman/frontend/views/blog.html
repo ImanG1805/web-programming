@@ -1,0 +1,114 @@
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-12 col-lg-10 col-xl-8">
+            <!-- Back Button -->
+            <div class="mb-4">
+                <button class="btn btn-outline-secondary" onclick="window.location.hash = 'landing-page'">
+                    &larr; Back to Blogs
+                </button>
+            </div>
+
+            <!-- Blog Post -->
+            <article class="card shadow-sm mb-5">
+                <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=800" 
+                     class="card-img-top" 
+                     alt="Morning Skincare Routine"
+                     style="height: 400px; object-fit: cover;">
+                <div class="card-body p-4">
+                    <!-- Tags -->
+                    <div class="mb-3">
+                        <span class="badge bg-primary me-2 mb-2">morning routine</span>
+                        <span class="badge bg-primary me-2 mb-2">skincare basics</span>
+                        <span class="badge bg-primary me-2 mb-2">tips</span>
+                    </div>
+                    
+                    <!-- Title -->
+                    <h1 class="card-title h2 mb-3">The Ultimate Guide to Morning Skincare Routine</h1>
+                    
+                    <!-- Meta Info -->
+                    <div class="text-muted mb-4">
+                        <div class="d-flex flex-wrap gap-3">
+                            <span><i class="fas fa-user me-1"></i> Sarah Mitchell</span>
+                            <span><i class="fas fa-calendar me-1"></i> October 15, 2024</span>
+                            <span><i class="fas fa-clock me-1"></i> 5 min read</span>
+                        </div>
+                    </div>
+
+                    <!-- Blog Content -->
+                    <div class="blog-content">
+                        <p class="lead">Discover the perfect morning skincare routine that will leave your skin glowing all day long.</p>
+                        
+                        <p>Starting your day with the right skincare routine can make all the difference in achieving healthy, radiant skin. Your morning routine should focus on protection and preparation for the day ahead.</p>
+                        
+                        <h4 class="mt-4 mb-3">Step 1: Gentle Cleansing</h4>
+                        <p>Begin with a gentle cleanser to remove overnight impurities without stripping your skin's natural oils. Look for sulfate-free formulas that maintain your skin's pH balance.</p>
+                        
+                        <h4 class="mt-4 mb-3">Step 2: Toning</h4>
+                        <p>Apply an alcohol-free toner to balance your skin's pH and prepare it for better absorption of subsequent products. Toners can also provide an extra layer of hydration.</p>
+                        
+                        <h4 class="mt-4 mb-3">Step 3: Antioxidant Serum</h4>
+                        <p>Vitamin C serums are perfect for morning use as they protect against environmental damage and help brighten your complexion.</p>
+                        
+                        <h4 class="mt-4 mb-3">Step 4: Moisturize</h4>
+                        <p>Choose a lightweight moisturizer that suits your skin type. This step helps to lock in hydration and create a smooth base for makeup if you wear it.</p>
+                        
+                        <h4 class="mt-4 mb-3">Step 5: Sunscreen</h4>
+                        <p>Never skip sunscreen! Apply a broad-spectrum SPF 30 or higher as the final step of your morning routine, even on cloudy days.</p>
+                        
+                        <div class="bg-light p-4 rounded mt-4">
+                            <p class="mb-0 fst-italic">"Consistency is key when it comes to skincare. A simple routine done regularly is better than a complex routine done occasionally."</p>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="mt-5 pt-4 border-top">
+                        <div class="d-flex gap-2 flex-wrap">
+                            <button class="btn btn-outline-primary btn-sm">
+                                <i class="fas fa-thumbs-up me-1"></i> Like
+                            </button>
+                            <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#commentModal">
+                                <i class="fas fa-comment me-1"></i> Add Comment
+                            </button>
+                            <button class="btn btn-outline-secondary btn-sm">
+                                <i class="fas fa-bookmark me-1"></i> Save
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Comments Section -->
+            <section class="border-top pt-4">
+                <h4 class="mb-4">Comments (<span id="commentCount">0</span>)</h4>
+                
+                <div id="commentsContainer">
+                    <!-- Comments will be loaded dynamically here -->
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+<!-- Comment Modal -->
+<div class="modal fade" id="commentModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title">Add a Comment</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form id="commentForm">
+                    <div class="mb-3">
+                        <label for="commentText" class="form-label">Your Comment</label>
+                        <textarea class="form-control" id="commentText" rows="4" placeholder="Share your thoughts..." required></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" id="submitComment">Post Comment</button>
+            </div>
+        </div>
+    </div>
+</div>
